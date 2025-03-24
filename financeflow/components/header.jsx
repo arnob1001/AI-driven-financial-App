@@ -10,7 +10,6 @@ import Image from "next/image";
 
 const Header = async () => {
   await checkUser();
-
   return (
     <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -60,7 +59,11 @@ const Header = async () => {
           </SignedIn>
           <SignedOut>
             <SignInButton forceRedirectUrl="/dashboard">
-              <Button variant="outline">Login</Button>
+            <Button variant="outline" className="bg-gradient-to-r from-[#43cea2] to-[#185a9d] hover:opacity-80">
+  Login
+</Button>
+
+
             </SignInButton>
           </SignedOut>
           <SignedIn>
